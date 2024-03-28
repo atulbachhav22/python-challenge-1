@@ -130,7 +130,7 @@ while place_order:
                 if menu_selection in menu_items.keys():
                     # Store the item name as a variable
                     #print(f"\nYou have selected menu {menu_selection['Item name']}")
-
+                    quantity = 1
                     # Ask the customer for the quantity of the menu item
                     quantity = input("\nEnter the quantity: ")
 
@@ -142,10 +142,10 @@ while place_order:
                         new_order = {"order": menu_items[menu_selection]['Item name'], "price": float(menu_items[menu_selection]['Price']), "quantity":  quantity } 
                         Orders_list.append(new_order);
                     else:
-                        print( "\nError!! Invalid selection" )
+                        print( "\n Invalid selection. " )
                     # Tell the customer that their input isn't valid
                 else: 
-                    print( "\nError!! Invalid selection" )
+                    print( "\n Invalid selection" )
 
                 # Tell the customer they didn't select a menu option
 
@@ -186,7 +186,7 @@ if len(Orders_list)>0:
     # Print out the customer's order
     print("This is what we are preparing for you.\n")
     print("Item name                 | Price     | Quantity")
-    print("--------------------------|---------- |----------")
+    print("--------------------------|---------- |-all----------")
     # 6. Loop through the items in the customer's order
     for order in Orders_list:
         # 8. Calculate the number of spaces for formatted printing
