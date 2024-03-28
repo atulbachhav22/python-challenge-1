@@ -194,8 +194,10 @@ if len(Orders_list)>0:
         # 9. Create space strings 
         item_spaces = " " * num_item_spaces
         print(f"{order['order']}{item_spaces}| ${order['price']}     | {order['quantity']}")
-        # 11. Calculate the cost of the order using list comprehension
-        total += int(order['quantity']) * float(order['price']); 
+      
+     
+    # 11. Calculate the cost of the order using list comprehension
+    total = sum(float(order['price']) * int(order['quantity']) for oitem in Orders_list)
     print("-------------------------------------------------")
     # and print the prices.
     print(f"Your Total is :                    ${total}           ")
