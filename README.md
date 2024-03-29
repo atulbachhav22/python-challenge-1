@@ -1,20 +1,26 @@
 # Interactive ordering system
 
 ## Order System
-Create an empty list. This list will later store a customer's order in dictionary format, as follows:
+
+Prompt the customer to show the menu category to sub menu
+
 ```sh
-[
-  {
-    "Item name": "string",
-    "Price": float,
-    "Quantity": int
-  },
-  {
-    "Item name": "string",
-    "Price": float,
-    "Quantity": int
-  },
-]
+1: Snacks
+2: Meals
+3: Drinks
+4: Dessert
+
+Item # | Item name                | Price
+-------|--------------------------|-------
+1      | Burrito                  | $4.49
+2      | Teriyaki Chicken         | $9.99
+3      | Sushi                    | $7.49
+4      | Pad Thai                 | $6.99
+5      | Pizza - Cheese           | $8.99
+6      | Pizza - Pepperoni        | $10.99
+7      | Pizza - Vegetarian       | $9.99
+8      | Burger - Chicken         | $7.49
+9      | Burger - Beef            | $8.49
 ```
 After the sub-menu is printed, prompt the customer to enter their selection from the menu, saving it as a variable menu_selection.
 
